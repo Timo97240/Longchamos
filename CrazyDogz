@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Choisissez un chiffre</title>
+</head>
+<body>
+  <h2>Choisissez un chiffre entre 100 et 300 :</h2>
+  <input type="number" id="numberInput" min="100" max="300">
+  <button onclick="closePage()">OK</button>
+
+  <script>
+    function closePage() {
+      var number = parseInt(document.getElementById("numberInput").value);
+      if (!isNaN(number)) {
+        for (var i = 0; i < number; i++) {
+          window.open('', '_self', '');
+          window.close();
+        }
+      }
+    }
+  </script>
+</body>
+</html>
